@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Generator: Adobe Illustrator 15.0.2, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="210px" height="308px" viewBox="0 0 210 308" enable-background="new 0 0 210 308" xml:space="preserve">
+<g>
+	<defs>
+		<rect id="SVGID_1_" width="210" height="308"/>
+	</defs>
+	<clipPath id="SVGID_2_">
+		<use xlink:href="#SVGID_1_" overflow="visible"/>
+	</clipPath>
+	<rect opacity="0" clip-path="url(#SVGID_2_)" fill-rule="evenodd" clip-rule="evenodd" fill="#FFFFFF" width="210" height="308"/>
+	
+		<rect x="19.584" y="1.252" clip-path="url(#SVGID_2_)" fill-rule="evenodd" clip-rule="evenodd" fill="#FFFFFF" width="173.932" height="28.375"/>
+	
+		<rect x="19.584" y="1.252" clip-path="url(#SVGID_2_)" fill="none" stroke="#323534" stroke-miterlimit="8" width="173.932" height="28.375"/>
+	<g clip-path="url(#SVGID_2_)">
+		<text transform="matrix(1 0 0 1 66.7842 22.8516)" fill="#262827" font-family="'ArialMT'" font-size="18">Initializing</text>
+	</g>
+	<g clip-path="url(#SVGID_2_)">
+		<text transform="matrix(1 0 0 1 145.8242 22.8516)" fill="#262827" font-family="'ArialMT'" font-size="18"> </text>
+	</g>
+	
+		<rect x="19.584" y="46.637" clip-path="url(#SVGID_2_)" fill-rule="evenodd" clip-rule="evenodd" fill="#FFFFFF" width="173.932" height="28.375"/>
+	
+		<rect x="19.584" y="46.637" clip-path="url(#SVGID_2_)" fill="none" stroke="#323534" stroke-miterlimit="8" width="173.932" height="28.375"/>
+	<g clip-path="url(#SVGID_2_)">
+		<text transform="matrix(1 0 0 1 54.7842 68.2363)" fill="#262827" font-family="'ArialMT'" font-size="18">Game Over? </text>
+	</g>
+	
+		<rect x="19.584" y="110.596" clip-path="url(#SVGID_2_)" fill-rule="evenodd" clip-rule="evenodd" fill="#FFFFFF" width="173.932" height="32.43"/>
+	
+		<rect x="19.584" y="110.596" clip-path="url(#SVGID_2_)" fill="none" stroke="#323534" stroke-miterlimit="8" width="173.932" height="32.43"/>
+	<g clip-path="url(#SVGID_2_)">
+		<text transform="matrix(1 0 0 1 58.7842 132.1953)" fill="#262827" font-family="'ArialMT'" font-size="18">(User-)Input </text>
+	</g>
+	
+		<rect x="19.834" y="161.166" clip-path="url(#SVGID_2_)" fill-rule="evenodd" clip-rule="evenodd" fill="#FFFFFF" width="173.682" height="55.568"/>
+	
+		<rect x="19.834" y="161.166" clip-path="url(#SVGID_2_)" fill="none" stroke="#323534" stroke-miterlimit="8" width="173.682" height="55.568"/>
+	<g clip-path="url(#SVGID_2_)">
+		<text transform="matrix(1 0 0 1 73.0337 182.7656)" fill="#262827" font-family="'ArialMT'" font-size="18">Updates </text>
+	</g>
+	<g clip-path="url(#SVGID_2_)">
+		<text transform="matrix(1 0 0 1 52.0337 203.7656)" fill="#262827" font-family="'ArialMT'" font-size="18">(</text>
+	</g>
+	<g clip-path="url(#SVGID_2_)">
+		<text transform="matrix(1 0 0 1 58.0278 203.7656)" fill="#262827" font-family="'ArialMT'" font-size="18">logic</text>
+	</g>
+	<g clip-path="url(#SVGID_2_)">
+		<text transform="matrix(1 0 0 1 95.0474 203.7656)" fill="#262827" font-family="'ArialMT'" font-size="18"> &amp; </text>
+	</g>
+	<g clip-path="url(#SVGID_2_)">
+		<text transform="matrix(1 0 0 1 117.0547 203.7656)" fill="#262827" font-family="'ArialMT'" font-size="18">rules</text>
+	</g>
+	<g clip-path="url(#SVGID_2_)">
+		<text transform="matrix(1 0 0 1 156.0703 203.7656)" fill="#262827" font-family="'ArialMT'" font-size="18">) </text>
+	</g>
+	
+		<rect x="19.709" y="233.719" clip-path="url(#SVGID_2_)" fill-rule="evenodd" clip-rule="evenodd" fill="#FFFFFF" width="173.807" height="28.375"/>
+	
+		<rect x="19.709" y="233.719" clip-path="url(#SVGID_2_)" fill="none" stroke="#323534" stroke-miterlimit="8" width="173.807" height="28.375"/>
+	<g clip-path="url(#SVGID_2_)">
+		<text transform="matrix(1 0 0 1 42.9092 255.3184)" fill="#262827" font-family="'ArialMT'" font-size="18">Output (display) </text>
+	</g>
+	
+		<rect x="19.584" y="279.078" clip-path="url(#SVGID_2_)" fill-rule="evenodd" clip-rule="evenodd" fill="#FFFFFF" width="173.932" height="28.375"/>
+	
+		<rect x="19.584" y="279.078" clip-path="url(#SVGID_2_)" fill="none" stroke="#323534" stroke-miterlimit="8" width="173.932" height="28.375"/>
+	<g clip-path="url(#SVGID_2_)">
+		<text transform="matrix(1 0 0 1 90.7842 300.6777)" fill="#262827" font-family="'ArialMT'" font-size="18">End </text>
+	</g>
+	
+		<line clip-path="url(#SVGID_2_)" fill="none" stroke="#323534" stroke-linejoin="round" stroke-miterlimit="10" x1="106.612" y1="29.689" x2="106.502" y2="44.699"/>
+	<polygon clip-path="url(#SVGID_2_)" fill-rule="evenodd" clip-rule="evenodd" fill="#323534" points="109.531,40.722    106.487,46.699 103.531,40.678  "/>
+	
+		<line clip-path="url(#SVGID_2_)" fill="none" stroke="#323534" stroke-linejoin="round" stroke-miterlimit="10" x1="106.612" y1="75.074" x2="106.494" y2="108.658"/>
+	<polygon clip-path="url(#SVGID_2_)" fill-rule="evenodd" clip-rule="evenodd" fill="#323534" points="109.508,104.669    106.487,110.658 103.508,104.647  "/>
+	
+		<line clip-path="url(#SVGID_2_)" fill="none" stroke="#323534" stroke-linejoin="round" stroke-miterlimit="10" x1="106.55" y1="143.025" x2="106.66" y2="159.166"/>
+	<polygon clip-path="url(#SVGID_2_)" fill-rule="evenodd" clip-rule="evenodd" fill="#323534" points="103.633,155.187    106.675,161.166 109.633,155.146  "/>
+	
+		<line clip-path="url(#SVGID_2_)" fill="none" stroke="#323534" stroke-linejoin="round" stroke-miterlimit="10" x1="106.675" y1="216.734" x2="106.619" y2="231.719"/>
+	<polygon clip-path="url(#SVGID_2_)" fill-rule="evenodd" clip-rule="evenodd" fill="#323534" points="109.635,227.729    106.612,233.719 103.634,227.708  "/>
+	<polyline clip-path="url(#SVGID_2_)" fill="none" stroke="#323534" stroke-miterlimit="8" points="17.709,293.266 1.709,293.266    1.709,60.824 19.584,60.824  "/>
+	<polygon clip-path="url(#SVGID_2_)" fill-rule="evenodd" clip-rule="evenodd" fill="#323534" points="13.709,290.266    19.709,293.266 13.709,296.266  "/>
+	<g clip-path="url(#SVGID_2_)">
+		<text transform="matrix(1 0 0 1 88 96.5859)" fill="#262827" font-family="'ArialMT'" font-size="18">N </text>
+	</g>
+	<g clip-path="url(#SVGID_2_)">
+		<text transform="matrix(1 0 0 1 7.9385 96.5859)"><tspan x="0" y="0" fill="#262827" font-family="'ArialMT'" font-size="18">Y</tspan><tspan x="11.682" y="0" fill="#262827" font-family="'ArialMT'" font-size="18"> </tspan></text>
+	</g>
+	<polyline clip-path="url(#SVGID_2_)" fill="none" stroke="#323534" stroke-miterlimit="8" points="193.516,245.084    208.944,245.084 208.944,60.832 195.391,60.832  "/>
+	<polygon clip-path="url(#SVGID_2_)" fill-rule="evenodd" clip-rule="evenodd" fill="#323534" points="199.391,63.832    193.391,60.832 199.391,57.832  "/>
+</g>
+</svg>

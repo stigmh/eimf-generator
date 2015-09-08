@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>Cookie Clicker auto-bot</title>
+  
+  <link rel="stylesheet" href="../js/highlight/styles/default.css" />
+  <script type="text/javascript" src="../js/highlight/highlight.pack.js"></script>
+  <script type="text/javascript">hljs.initHighlightingOnLoad();</script>
+</head>
+<body>
+  <h1>Cookie Clicker auto-bot</h1>
+  
+  <p class="date">2014-10-01</p>
+  
+  <pre class="JavaScript">var stigKake = document.getElementById('bigCookie'); var stigGold = document.getElementById('goldenCookie'); var stigDeer = document.getElementById('seasonPopup'); var stigIntervals = []; for (var i = 0; i < 100; ++i) { stigIntervals.push(setInterval(function() { stigKake.click(); }, 1)); }; stigIntervals.push(setInterval(function() { if ((stigGold.style.display !== 'none') || (stigGold.style.opacity > 0.000)) { stigGold.click(); } if ((stigDeer.style.display !== 'none') || (stigDeer.style.opacity > 0.000)) { stigDeer.click(); } if (Game.wrinklers.length > 0) {for (var w in Game.wrinklers){if (Game.wrinklers[w].sucked > 0) {Game.wrinklers[w].hp = 0; } } } }, 250));</pre>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>A look at Doom 3 in OSX</title>
+  
+  <link rel="stylesheet" href="../js/highlight/styles/default.css" />
+  <script type="text/javascript" src="../js/highlight/highlight.pack.js"></script>
+  <script type="text/javascript">hljs.initHighlightingOnLoad();</script>
+</head>
+<body>
+  <h1>A look at Doom 3 in OSX</h1>
+  
+  <p class="date">2013-07-04</p>
+  
+  <p>Main/program entry point is located in <em>./neo/sys/osx/DOOMController.mm</em> (objective C) line 838. It doesn't do much, but performs a <em>NSApplicationMain()</em> call that is a part of the Cocoa framework (more info <a href="http://www.cocoawithlove.com/2009/01/demystifying-nsapplication-by.html" target="_blank">here</a>). It eventually invokes <em>applicationDidFinishLaunching</em> at line 102 that has an interesting assert, ensuring that the <em>bool</em> data type has the size of 1 byte. This is probably to ensure that the game runs on the intended architecture. Next, it calls <em>quakeMain</em>, located at line 239, which finally is the actual &quot;entry point&quot; of interest.</p>
+
+  <p>Window is instantiated in CreateGameWindow, line 266, in macosx_glimp.mm. But most of the interesting stuff is on line 115, GLimp_SetMode(). RenderSystem_init.cpp, line 2248, method dRenderSystemLocal::InitOpenGL, initializes and launches the window. Common.cpp, line 2923, method idCommonLocal::InitGame, initializes everything, including the render system, loading the game dll, and more. The game session is established at line 3032.</p>
+
+  <p>Session_menu.cpp, line 71 being interesting, in idSessionLocal::StartMenu(). Called from Common.cpp, line 2842.</p>
+
+  <p>Common.cpp, line 3006, idAsyncNetwork::serverDedicated.GetInteger() == 1.</p>
+
+  <p>Session_menu.cpp, line 564, idSessionLocal::HandleMainMenuCommands(), has something to do w/dedicated server.</p>
+
+  <p>Dedicated server seems to need to be set in default.cfg: seta net_serverDedicated &quot;1&quot;<br />
+  Common.cpp, line 3003, idAsyncNetwork::server.InitPort(); IF dedicated server!</p>
+
+  <p>./neo/framework/async contains all network code, where the AsyncNetwork class' init() function is the network code initializer. AsyncNetwork.h contains multiple configuration options mainly defined as constant integers.</p>
+
+  <p>cmdSystem-&gt;addCommand(&quot;command_name&quot;, function_ptr, flags, &quot;description&quot;);</p>
+
+  <p>Start-up screen &amp; the game itselves is initialized and etablished in Game_local.cpp, line 2609 is interesting!</p>
+</body>
+</html>

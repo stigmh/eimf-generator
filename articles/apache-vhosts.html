@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>Apache Virtual Server 1-2-3</title>
+  
+  <link rel="stylesheet" href="../js/highlight/styles/default.css" />
+  <script type="text/javascript" src="../js/highlight/highlight.pack.js"></script>
+  <script type="text/javascript">hljs.initHighlightingOnLoad();</script>
+</head>
+<body>
+
+<h1>Apache Virtual Server 1-2-3 (how to)</h1>
+
+<p class="date">2010-11-09</p>
+
+<p>Several years have passed by since I first was introduced to Linux and Apache. I've never been a Linux/Unix desktop guy, but no OS beats Linux/Unix distros when it comes to servers. It's about one and a half year ago since I first was introduced to Virtual Servers in Apace and I'm using it more and more. Setting up a Virtual Server is easy, fast and extremely useful; it gives you the opportunity to host several sites (with different domains) on one server. I'll use everythingismyfault.com as an example in this guide. Everythingismyfault.com has the same IP as <a href="http://nerdvar.com/" target="_blank">nerdvar.com</a> and is running from a directory on the same server, Virtual Server makes it possible. This technique has been tested on CentOS5, Mandriva Linux and Fedora. I should also work on the most distros with Apache 2.</p>
+
+<p>First, connect to your server; using OpenSSH (Putty) or direct access (terminal). Then, gain root access (su/sudo command) and navigate yourselves to <em>/etc/httpd/conf.d</em>. For security reasons we'll have to create a new file here called <em>01.conf</em>, it's important that this  file gets listed on top as Apache sorts and runs through the config files in an alphabetical order. Create the file using vi, vim, emacs or your favorite editor. Copy-paste this:</p>
+
+<pre><code class="Apache"># Set up empty virtual host so that original content doesn't change
+NameVirtualHost *:80</code></pre>
+
+<p>Apache will display the first (listed) available virtual server if you try to connect to a non-existing virtual server. This file makes sure the user get's web root (often <em>/var/www/html</em>) displayed.</p>
+
+<p>Then we'll add our virtual servers in separate .conf files. You should give your conf files pretty obvious names, like: everythingismyfault.com.conf:</p>
+
+<pre><code class="Apache"><VirtualHost *:80>
+  ServerName www.everythingismyfault.com
+  ServerAlias everythingismyfault.com vvv.everythingismyfault.com
+
+  DocumentRoot /home/everythingismyfault/html
+
+  <Directory /home/everythingismyfault/html>
+    Options FollowSymLinks -Indexes
+    AllowOverride None
+
+    Order allow,deny
+    Allow from all
+  </Directory>
+</VirtualHost></code></pre>
+
+<p> DocumentRoot and Directory needs of course to be the same directory and should be the web root of the wanted virtual server. So what does it do? Well, first of all it defines the virtual server then sets the Apache configuration for the same directory (<Directory />).</p>
+
+<p>Now we'll have to restart Apache. Run <em>/etc/init.d/httpd configtest</em> to make sure you haven't ruined the config files. If everything is OK, restart Apache. All that remains is to buy and configure the domain, set it's DNS record A to your server's IP address. If you want to test it first, edit your computers host file. You'll find it in <em>/etc/hosts</em> on Linux and <em>C:/WINDOWS/system32/drivers/etc/hosts</em> on Windows (you'll need escalated privileges in Windows Vista and newer). Make it look something like this:</p>
+
+<pre><code>127.0.0.1   localhost
+<serverIP> example.com  www.example.com</code></pre>
+
+<p>Save the file, restart your browser, type example.com in the address bar and that's it! PS: the hosts file can be used to trick friends and family. You can make them feks. believe that facebook is hacked by changing facebook's IP adress into another server.</p>
+
+</body>
+</html>

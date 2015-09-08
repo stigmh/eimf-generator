@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>scp File Transfers</title>
+  
+  <link rel="stylesheet" href="../js/highlight/styles/default.css" />
+  <script type="text/javascript" src="../js/highlight/highlight.pack.js"></script>
+  <script type="text/javascript">hljs.initHighlightingOnLoad();</script>
+</head>
+<body>
+
+<h1>Transfer files using scp</h1>
+
+<p class="date">2013-10-01</p>
+
+<p>scp is an excellent command line program for secure file transfer through the SSH protocol, and it is distributed together with SSH on (most?) modern Unix based distributions, including OSX and Ubuntu. It is especially useful for file transfers when you are remote controlling a machine without any graphical user interface.</p>
+
+<p>The basic syntax of the program is as following:</p>
+
+<pre><code class="bash">scp [flags] &lt;source&gt; &lt;destination&gt;</code></pre>
+
+<p>A more specific syntax:</p>
+
+<pre><code class="bash">scp [flags] [&lt;source username&gt;@&lt;source ip/domain&gt;:]&lt;source directory/file&gt; &lt;destination username&gt;@&lt;destination ip/domain&gt;:&lt;destination directory/file&gt;&lt;/pre&gt;</code></pre>
+
+<p>Things betwen the brackets [] are optional. All standard Unix file system conventions can be used for the directories and files.</p>
+
+<h3>Example: transferring files</h3>
+
+<p><strong>Transfer file from local machine to an external machine</strong></p>
+
+<pre><code class="bash">scp ./my/local/source/file.txt username@externalmachine:/destination/directory/</code></pre>
+
+<p><strong>Transfer file from external machine to local machine</strong></p>
+
+<pre><code class="bash">scp username@externalmachine:./source/file.txt ./my/local/destination</code></pre>
+
+<h3>Example: transferring directories</h3>
+
+<p><strong>Transfer directory from local machine to an external machine:</strong></p>
+
+<pre><code class="bash">scp -r ./my/local/directory username@externalmachine:/destination/directory/</code></pre>
+
+<p><strong>Transfer directory from external machine to local machine:</strong></p>
+
+<pre><code class="bash">scp -r username@externalmachine:./source/directory ./my/local/destination</code></pre>
+
+<p>The -r option stands for &laquo;recursive&raquo; and ensures a recursive copy of the entire directory, including sub-directories.</p>
+
+<h3>Transferring between two external machines</h3>
+
+<p>scp can also transfer files between two remote/external hosts. The following illustrates a simple file transfer between two external machines, combine it with the previous examples to transfer directories.</p>
+
+<pre><code class="bash">scp user1@sourcemachine:~/source/file.c user2@destinationmachine:/destination/</code></pre>
+
+<p>This does however require that the source machine can connect to destination machine through SSH without a password prompt. It can be done by using SSH keys for authentication, or by having the same user with the same password on both machines. This is because the command (under the hood) creates a SSH connection to the first remote machine and invokes the scp command there.</p>
+
+<h3>Limiting bandwidth</h3>
+
+<p>The -l option allows you to limit the bandwidth usage of the transfer, which can be useful on limited connections and when transferring huge files. The following example limits the file to a maximum of 8 kilobits (1 kilobyte) per second:</p>
+
+<pre><code class="bash">scp -l 8 ./my/local/source/file.txt username@externalmachine:/destination/directory/</code></pre>
+
+<h4>Want more?</h4>
+
+<p>Check out the manual; open a terminal and type &laquo;man scp&raquo;. It might be too cryptic for some, which you in that case should Google it. I recommend using <a href="https://filezilla-project.org/" target="_blank">FileZilla</a> if you're not custom to the terminal and command line programs, and you're looking for a SSH/FTP/Unix file transfer program with a GUI.</p>
+
+</body>
+</html>

@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="461px" height="333.167px" viewBox="0 0 461 333.167" enable-background="new 0 0 461 333.167" xml:space="preserve">
+<g id="Layer_1">
+	<g>
+		
+			<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="222.2668" y1="308.1001" x2="222.2668" y2="-22.9004" gradientTransform="matrix(1 0 0 -1 8.3999 309.2666)">
+			<stop offset="0" style="stop-color:#A2EEFF"/>
+			<stop offset="0.1887" style="stop-color:#97E4FF"/>
+			<stop offset="0.5199" style="stop-color:#7AC8FF"/>
+			<stop offset="0.9518" style="stop-color:#4B9BFF"/>
+			<stop offset="1" style="stop-color:#4596FF"/>
+		</linearGradient>
+		
+			<rect x="1.167" y="1.167" fill="url(#SVGID_1_)" stroke="#000000" stroke-width="2" stroke-miterlimit="10" width="458.999" height="331"/>
+		
+			<linearGradient id="SVGID_2_" gradientUnits="userSpaceOnUse" x1="222.2668" y1="308.1001" x2="222.2668" y2="280.1001" gradientTransform="matrix(1 0 0 -1 8.3999 309.2666)">
+			<stop offset="0" style="stop-color:#E6E6E6"/>
+			<stop offset="0.455" style="stop-color:#DBDBDB"/>
+			<stop offset="1" style="stop-color:#C8C8C8"/>
+		</linearGradient>
+		
+			<rect x="1.167" y="1.167" fill="url(#SVGID_2_)" stroke="#000000" stroke-width="2" stroke-miterlimit="10" width="458.999" height="28"/>
+		<g>
+			
+				<linearGradient id="SVGID_3_" gradientUnits="userSpaceOnUse" x1="382.2659" y1="307.6001" x2="382.2659" y2="288.6001" gradientTransform="matrix(1 0 0 -1 8.3999 309.2666)">
+				<stop offset="0" style="stop-color:#969696"/>
+				<stop offset="0.3058" style="stop-color:#8B8B8B"/>
+				<stop offset="0.8406" style="stop-color:#6E6E6E"/>
+				<stop offset="1" style="stop-color:#646464"/>
+			</linearGradient>
+			<rect x="363.666" y="1.667" fill="url(#SVGID_3_)" stroke="#000000" stroke-miterlimit="10" width="54" height="19"/>
+			
+				<linearGradient id="SVGID_4_" gradientUnits="userSpaceOnUse" x1="422.7659" y1="307.6001" x2="422.7659" y2="288.6001" gradientTransform="matrix(1 0 0 -1 8.3999 309.2666)">
+				<stop offset="0" style="stop-color:#FF9696"/>
+				<stop offset="0.1301" style="stop-color:#FF8B8B"/>
+				<stop offset="0.3585" style="stop-color:#FF6E6E"/>
+				<stop offset="0.6583" style="stop-color:#FF3E3E"/>
+				<stop offset="1" style="stop-color:#FF0000"/>
+			</linearGradient>
+			<rect x="417.666" y="1.667" fill="url(#SVGID_4_)" stroke="#000000" stroke-miterlimit="10" width="27" height="19"/>
+			<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="390.666" y1="1.167" x2="390.666" y2="21.167"/>
+		</g>
+	</g>
+</g>
+<g id="Layer_2">
+	<g>
+		<g>
+			<polyline fill="none" stroke="#3F3F3F" stroke-width="3" stroke-miterlimit="10" points="375.666,314.083 375.666,320.083      369.666,320.083    "/>
+			
+				<line fill="none" stroke="#3F3F3F" stroke-width="3" stroke-miterlimit="10" stroke-dasharray="11.9114,11.9114" x1="357.755" y1="320.083" x2="30.192" y2="320.083"/>
+			<polyline fill="none" stroke="#3F3F3F" stroke-width="3" stroke-miterlimit="10" points="24.237,320.083 18.237,320.083      18.237,314.083    "/>
+			
+				<line fill="none" stroke="#3F3F3F" stroke-width="3" stroke-miterlimit="10" stroke-dasharray="12.3158,12.3158" x1="18.237" y1="301.768" x2="18.237" y2="86.241"/>
+			<polyline fill="none" stroke="#3F3F3F" stroke-width="3" stroke-miterlimit="10" points="18.237,80.083 18.237,74.083      24.237,74.083    "/>
+			
+				<line fill="none" stroke="#3F3F3F" stroke-width="3" stroke-miterlimit="10" stroke-dasharray="11.9114,11.9114" x1="36.148" y1="74.083" x2="363.71" y2="74.083"/>
+			<polyline fill="none" stroke="#3F3F3F" stroke-width="3" stroke-miterlimit="10" points="369.666,74.083 375.666,74.083      375.666,80.083    "/>
+			
+				<line fill="none" stroke="#3F3F3F" stroke-width="3" stroke-miterlimit="10" stroke-dasharray="12.3158,12.3158" x1="375.666" y1="92.399" x2="375.666" y2="307.925"/>
+		</g>
+	</g>
+	<g>
+		<g>
+			<polyline fill="none" stroke="#3F3F3F" stroke-width="3" stroke-miterlimit="10" points="441.675,254.083 441.666,260.083      435.666,260.083    "/>
+			
+				<line fill="none" stroke="#3F3F3F" stroke-width="3" stroke-miterlimit="10" stroke-dasharray="12.41,12.41" x1="423.256" y1="260.083" x2="156.442" y2="260.083"/>
+			<polyline fill="none" stroke="#3F3F3F" stroke-width="3" stroke-miterlimit="10" points="150.237,260.083 144.237,260.083      144.237,254.083    "/>
+			
+				<line fill="none" stroke="#3F3F3F" stroke-width="3" stroke-miterlimit="10" stroke-dasharray="12.5882,12.5882" x1="144.237" y1="241.496" x2="144.237" y2="46.377"/>
+			<polyline fill="none" stroke="#3F3F3F" stroke-width="3" stroke-miterlimit="10" points="144.237,40.083 144.237,34.083      150.237,34.083    "/>
+			
+				<line fill="none" stroke="#3F3F3F" stroke-width="3" stroke-miterlimit="10" stroke-dasharray="12.4245,12.4245" x1="162.661" y1="34.083" x2="429.788" y2="34.083"/>
+			<polyline fill="none" stroke="#3F3F3F" stroke-width="3" stroke-miterlimit="10" points="436,34.083 442,34.083 441.991,40.083         "/>
+			
+				<line fill="none" stroke="#3F3F3F" stroke-width="3" stroke-miterlimit="10" stroke-dasharray="12.5883,12.5883" x1="441.973" y1="52.672" x2="441.685" y2="247.79"/>
+		</g>
+	</g>
+	
+		<line fill="none" stroke="#3F3F3F" stroke-width="3" stroke-miterlimit="10" stroke-dasharray="12" x1="18.237" y1="74.083" x2="144.237" y2="34.083"/>
+	
+		<line fill="none" stroke="#3F3F3F" stroke-width="3" stroke-miterlimit="10" stroke-dasharray="12" x1="375.666" y1="74.083" x2="442" y2="34.083"/>
+	
+		<line fill="none" stroke="#3F3F3F" stroke-width="3" stroke-miterlimit="10" stroke-dasharray="12" x1="375.666" y1="320.083" x2="441.666" y2="260.083"/>
+	
+		<line fill="none" stroke="#3F3F3F" stroke-width="3" stroke-miterlimit="10" stroke-dasharray="12" x1="18.237" y1="320.083" x2="144.237" y2="260.083"/>
+</g>
+<g id="Layer_3">
+	<g>
+		<g>
+			<g>
+				<line stroke="#646464" stroke-width="3" stroke-miterlimit="10" x1="131.841" y1="62.844" x2="133.725" y2="61.847"/>
+				<g>
+					<path d="M132.699,62.388c-4.007-1.388-7.931-6.253-9.878-10.038c6.126,3.224,13.03,5.209,19.984,4.69       c-4.586,5.455-6.837,12.628-8.306,19.664C132.841,72.425,131.403,66.925,132.699,62.388z"/>
+				</g>
+			</g>
+		</g>
+		<polygon points="34.401,91.639 131.5,60.959 133.572,62.122 38.65,93.67   "/>
+	</g>
+	<g>
+		<g>
+			<line fill="none" stroke="#000000" stroke-width="4" stroke-miterlimit="10" x1="34.097" y1="92.764" x2="360.623" y2="92.764"/>
+			<g>
+				<path d="M359.503,92.264c-3.465-4.18-5.114-12.445-5.251-18.18c4.748,7.699,10.921,14.414,18.388,18.18      c-7.467,3.605-13.366,10.727-18.388,18.18C354.66,104.303,355.904,96.85,359.503,92.264z"/>
+			</g>
+		</g>
+	</g>
+	<g>
+		<g>
+			<line fill="none" stroke="#000000" stroke-width="4" stroke-miterlimit="10" x1="34.097" y1="92.764" x2="34.097" y2="291.307"/>
+			<g>
+				<path d="M34.347,289.569c4.18-3.531,12.444-5.215,18.18-5.353c-7.699,4.841-14.414,11.134-18.18,18.746      c-3.605-7.612-10.728-13.627-18.181-18.746C22.307,284.632,29.761,285.9,34.347,289.569z"/>
+			</g>
+		</g>
+	</g>
+	<text transform="matrix(1 0 0 1 375.6663 100.1675)" font-family="'MyriadPro-Regular'" font-size="37">x</text>
+	<text transform="matrix(1 0 0 1 25.1663 321.1675)" font-family="'MyriadPro-Regular'" font-size="37">y</text>
+	<text transform="matrix(1 0 0 1 142.8049 64.5273)" font-family="'MyriadPro-Regular'" font-size="32">z</text>
+</g>
+</svg>

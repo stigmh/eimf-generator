@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>An introduction to PHP</title>
+  
+  <link rel="stylesheet" href="../js/highlight/styles/default.css" />
+  <script type="text/javascript" src="../js/highlight/highlight.pack.js"></script>
+  <script type="text/javascript">hljs.initHighlightingOnLoad();</script>
+</head>
+<body>
+  <h1>An introduction to PHP</h1>
+  
+  <p class="date">2012-08-10</p>
+  
+  <p class="image"></p>
+  
+  <div class="entry-content">
+<p>I’ve been a PHP developer for more than 6 years now and time has come to start sharing some of my knowledge. It was my good friend, Martin Nordal, who introduced me to the language, and I’ve been hooked ever since. PHP is free, easy to learn, fast, secure and a great tool for anyone who ever needs dynamic content published on the world wide web. This post will give you a quick and brief introduction to PHP, how it works and how to code.</p>
+<p>This tutorial requires:</p>
+<ul>
+<li>Basic HTML skills</li>
+<li>A plain text (text-only, no formatting) editor; notepad (standard in Windows), <a target="_blank" title="Notepad2" href="http://www.flos-freeware.ch/notepad2.html">notepad2</a>, <a target="_blank" title="Notepad++" href="http://notepad-plus-plus.org/">notepad++</a> ..etc</li>
+<li>Access to a web server, running PHP (PHP 5.x is recommended)</li>
+</ul>
+<h2>What is PHP?</h2>
+<p>PHP (PHP Hypertext Preprocessor) is a scripting language, originally designed to produce dynamic web pages. Firstly, it is important to separate PHP as software and a scripting language. The scripting is what you’ll learn, while the software runs on the server and makes the magic happen. Most modern web servers come with PHP installed, it is free software everyone easily can get hold of. When developing, the main difference between HTML and PHP files is that you’ll save your files as <em>.php</em> instead of <em>.html</em>. Except for that, they’re both flat files with slightly different content. This is quite important as most web servers aren’t configured to parse regular <em>.html</em> files as PHP.</p>
+<h2>How does it work?</h2>
+<p>Imagine you loading this web page into your browser, what happens? The browser sends a request to the web server, asking to retrieve the web site’s main HTML and required files. The usual behaviour with plain HTML files, is that the server replies, returning all the static HTML data. With PHP, it’s slightly different. Before sending the files from the server, the PHP interpretor recognises the the request for a file with the <em>.php</em> extension. Then it parses the PHP blocks which (usually) modifies the HTML (dynamic), then returns the modified HTML. Therefore, unlike HTML and JavaScript, the source code is never open for everyone to see! PHP script modifies the HTML dynamically, and returns the result to the browser as plain regular HTML.</p>
+<p>Do not be afraid if you don’t get this right away, you’ll understand it in soon.</p>
+<h2>Hello world!</h2>
+<p>It is time to write your first block of PHP, open your text editor and write the following code:</p>
+
+<pre><code class="html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;meta http-equiv="Content-Type" content="text/html; charset=utf-8" /&gt;
+    &lt;title&gt;My first PHP&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p&gt;&lt;?php echo('Hello world!'); ?&gt;&lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+<p>Save the file as <em>helloworld.php</em>, upload it to your web server, open it in your browser. You should see a white page displaying nothing but “Hello world!”. If you look at the code above, it is all plain HTML, except for the one line within the body tags; That’s PHP! Look at the source code of the site in the browser (press Ctrl+U), notice that the PHP is gone and it’s all plain HTML.</p>
+
+<h2>The Basics</h2>
+
+<h3>Delimiters</h3>
+
+<p><strong>&lt;?php <em>/* PHP code here */</em> ?&gt;</strong><br>
+
+In order for the PHP interpretor (compilator) to separate the PHP (do process) from the HTML (do not process), we need to declare what’s PHP and what’s not. This is done by wrapping the PHP code blocks within the PHP delimiters (&lt;!?php ... ?&gt;).</p>
+
+<h3>General syntax</h3>
+
+<p>PHP is somewhat similar to all the other intermediate- and high-level programming languages. It’s easy to migrate and learn PHP if you already have some programming or scripting experience. The main difference is how variables are used in PHP.</p>
+
+<ul>
+<li>All lines (including function calls) ends with semicolons, example: echo();</li>
+<li>Variables are declared without data types.</li>
+<li>Variables are case sensitive</li>
+<li>Variables are declared and used with the dollar sign, example: $myVariable= 12;</li>
+<li>Variables can change data type at any time, without any casts, example: $var = 12; $var = ‘Hello'; $var = true;</li>
+<li>All variables can be compared with eachother, no matter the data type, example: if (123 == ‘123’) echo(‘Wait, what!?’);
+<ul>
+<li>Data types are automatically casted when comparing different datatypes</li>
+<li>Use three comparison operators (===) to compare both value and datatype</li>
+</ul>
+</li>
+<li>You can have as many blocks of PHP as you like in one document.</li>
+</ul>
+
+<p>Examples:</p>
+
+<pre><code class="php">&lt;?php
+  $string = &#39;123&#39;;
+  $integer = 123;
+  $float = 12.34;
+
+  if ($string == $integer)
+  {
+     echo(&#39;&lt;p&gt;$string\&#39;s value equals $integer&lt;/p&gt;&#39;); // This will occur
+  }
+
+  if ($string === $integer)
+  {
+    echo(&#39;&lt;p&gt;$string is same value and datatype as $integer&lt;/p&gt;&#39;); // This will never occur
+  }
+
+  if ($string != $integer)
+  {
+    echo(&#39;&lt;p&gt;$string has not the same value as $integer&lt;/p&gt;&#39;); // This will never occur
+  }
+
+  if ($string !== $integer)
+  {
+    echo(&quot;&lt;p&gt;$string is not equal to $integer&lt;/p&gt;&quot;); // This will occur
+  }
+?&gt;</code></pre>
+
+<p>Output:</p>
+
+<pre><code class="html">&lt;p&gt;$string's value equals $integer&lt;/p&gt;
+&lt;p&gt;123 is not equal to 123&lt;/p&gt;</code></pre>
+
+<h3>Operators</h3>
+
+<p>PHP supports all common operators.</p>
+
+<ul>
+<li>if, else, elseif (note; <span style="text-decoration: underline;">no space</span>), switch</li>
+<li>==, ===, ||, or (same as ||), &amp;&amp;, !, &gt;, &lt;</li>
+<li>for, foreach, while, do { .. } while()</li>
+</ul>
+<h3>Double quotes VS single quotes</h3>
+
+
+<p>PHP supports both single and double quotes when working with strings. There is however a difference. Everything in double quotes gets processed by PHP, which means that it slower than single quotes. Never use double quotes unless you have to! The following example should demonstrate the differences:</p>
+
+<pre><code class="php">&lt;?php
+$var = &#39;PHP&#39;;
+
+echo(&#39;&lt;p&gt;The variable is $var\n&lt;/p&gt;&#39;);
+echo(&quot;&lt;p&gt;The variable is $var&lt;/p&gt;\n&quot;);
+echo(&#39;&lt;p&gt;&#39;.$var.&#39; is the language&lt;/p&gt;&#39;.&quot;\n&quot;); // The most efficient way
+?&gt;</code></pre>
+
+<p>Output:</p>
+
+<pre><code class="html">&lt;p&gt;The variable is $var\n&lt;/p&gt;
+&lt;p&gt;The variable is PHP&lt;/p&gt;
+
+&lt;p&gt;PHP is the language&lt;/p&gt;
+
+</code></pre>
+
+<h3>Arrays</h3>
+
+<p>An array is a list or collection of data/variables defined as a variable. It’s one of PHP’s and other programming languages most powerful features, as it allows iterations and dynamic data. It is more or less a variable with a list of keys. You can use the keys to store, retrieve or remove data. PHP’s arrays are more or less a combination of a traditional Array, List and a Dictionary. You do not have to define it’s size, it expands automatically, keys kan be defined as both numbers and Strings.</p>
+
+<p>Examples</p>
+
+<pre><code class="php">&lt;?php
+/** Various ways to define arrays */
+
+// Define empty array
+$myArray = array();
+
+// Define array with some values
+$yourArray = array(1, 23, 45, &#39;cow&#39;, true, 65.3);
+
+// Define an array as a &quot;Dictionary&quot; with keys and values
+$dictionaryArray = array(
+  &#39;key&#39; =&gt; &#39;value&#39;,
+  &#39;number&#39; =&gt; 123,
+  5 =&gt; &#39;five&#39;,
+  &#39;author&#39; =&gt; &#39;Stig&#39;,
+  0 =&gt; 45
+);
+
+// Another way to define an Array (shorter)
+$weekDays = [
+  0 =&gt; &#39;Monday&#39;,
+  1 =&gt; &#39;Tuesday&#39;,
+  2 =&gt; &#39;Wednesday&#39;,
+  3 =&gt; &#39;Thursday&#39;,
+  4 =&gt; &#39;Friday&#39;,
+  5 =&gt; &#39;Saturday&#39;,
+  6 =&gt; &#39;Sunday&#39;
+];
+
+// Multi dimensional array
+$books = [
+	[
+		&#39;title&#39; =&gt; &#39;The Hobbit&#39;,
+		&#39;author&#39; =&gt; &#39;J.R.R. Tolkien&#39;,
+		&#39;prices&#39; =&gt; array(
+			&#39;US&#39; =&gt; 19.99,
+			&#39;EU&#39; =&gt; 22.99,
+			&#39;NOK&#39; =&gt; 199.99
+		)
+	],
+	[
+		&#39;title&#39; =&gt; &#39;Agile Web Development with Rails&#39;,
+		&#39;author&#39; =&gt; [&#39;Sam Ruby&#39;, &#39;Dave Thomas&#39;, &#39;David Heinemeier Hansson&#39;],
+		&#39;prices&#39; =&gt; array(
+			&#39;US&#39; =&gt; 22.09,
+			&#39;EU&#39; =&gt; 24.09,
+			&#39;NOK&#39; =&gt; 239.45
+		)
+	]
+];
+
+/** Working with arrays */
+
+// Adding data to the end of an Array
+array_push($myArray, &#39;new data&#39;);
+array_push($myArray, 1234);
+$myArray[] = 4321;
+$myArray[] = &#39;data new&#39;;
+
+// Adding data by key. 1th key is always 0.
+$myArray[4] = &#39;moar data&#39;; // 5th entry (key + 1)
+$yourArray[6] = &#39;arrays&#39;; // 7th entry
+
+// Adding data to the multidimensional array
+$books[] = array(
+	&#39;title&#39; =&gt; &#39;Java Software Structures&#39;,
+	&#39;author&#39; =&gt; [&#39;Lewis&#39;, &#39;Chase&#39;],
+	&#39;prices&#39; =&gt; array(
+		&#39;US&#39; =&gt; 54.99,
+		&#39;EU&#39; =&gt; 56.99,
+		&#39;NOK&#39; =&gt; 199123.9901
+	)
+);
+
+// Accessing and modifying data
+
+// Fetching values
+echo(&#39;&lt;p&gt;First element in $myArray: &#39;.$myArray[0].&#39;&lt;/p&gt;&#39;);
+echo(&#39;&lt;p&gt;Accessing the &quot;number&quot; key in $dictionaryArray: &#39;.$dictionaryArray[&#39;number&#39;].&#39;&lt;/p&gt;&#39;);
+
+// Modifying a value
+$weekDays[5] = &#39;Caturday&#39;;
+
+// Looping through arrays
+
+// Get number of elements in myArray. Store in variable for performance.
+$size = count($myArray);
+for ($i = 0; $i &lt; $size; ++$i) // do this $size times
+{
+  // Print the value of the current element
+	echo($myArray[$i].&#39;&lt;br&gt;&#39;);
+}
+
+// Demonstrates a simple foreach, loops through all elements
+foreach ($yourArray as $value)
+{
+	// Print the value of the current element
+	echo($value.&#39;&lt;br&gt;&#39;);
+}
+
+// Demonstrates another foreach with access to keys
+foreach ($weekDays as $key =&gt; $day)
+{
+	// Print the data of the current element
+	echo($day.&#39; is the &#39;.($key + 1).&#39;. day of the week&lt;br&gt;&#39;);
+}
+
+// Combination with multidimentional array
+$size = count($books);
+for ($i = 0; $i &lt; $size; ++$i)
+{
+	// Check if the current book has multiple authors (is array)
+	if (is_array($books[$i]))
+	{
+		// Multiple authors, print &#39;em all!
+		foreach ($books[$i][&#39;author&#39;] as $author)
+		{
+			// Print name and book title
+			echo($author.&#39; [&#39;.$books[$i][&#39;title&#39;].&#39;]&lt;br /&gt;&#39;);
+		}
+	}
+	else
+	{
+		// One author, print his name and book title
+		echo($books[$i][&#39;author&#39;].&#39; [&#39;.$books[$i][&#39;title&#39;].&#39;]&lt;br /&gt;&#39;);
+	}
+}
+?&gt;</code></pre>
+
+<p>Output:</p>
+
+<pre><code class="html">&lt;p&gt;First element in $myArray: new data&lt;/p&gt;
+&lt;p&gt;Accessing the &quot;number&quot; key in $dictionaryArray: 123&lt;/p&gt;
+
+new data&lt;br /&gt;
+1234&lt;br /&gt;
+4321&lt;br /&gt;
+data new&lt;br /&gt;
+moar data&lt;br /&gt;
+&lt;br /&gt;
+1&lt;br /&gt;
+23&lt;br /&gt;
+45&lt;br /&gt;
+cow&lt;br /&gt;
+&lt;br /&gt;
+65.3&lt;br /&gt;
+arrays&lt;br /&gt;
+Monday is the 1. day of the week&lt;br /&gt;
+Tuesday is the 2. day of the week&lt;br /&gt;
+Wednesday is the 3. day of the week&lt;br /&gt;
+Thursday is the 4. day of the week&lt;br /&gt;
+Friday is the 5. day of the week&lt;br /&gt;
+Caturday is the 6. day of the week&lt;br /&gt;
+Sunday is the 7. day of the week&lt;br /&gt;
+J.R.R. Tolkien [The Hobbit]&lt;br /&gt;
+Sam Ruby [Agile Web Development with Rails]&lt;br /&gt;
+Dave Thomas [Agile Web Development with Rails]&lt;br /&gt;
+David Heinemeier Hansson [Agile Web Development with Rails]&lt;br /&gt;
+Lewis [Java Software Structures]&lt;br /&gt;
+Chase [Java Software Structures]&lt;br /&gt;</code></pre>
+
+<h3>Functions</h3>
+
+<p>PHP has loads of functions and libraries, which all are documented and explained on <a target="_blank" href="http://php.net/">http://php.net/</a>. It’s a quick and great resource when developing PHP, as it’s basicly http://php.net/<function name="">. Try for instance to look up the <a target="_blank" href="http://php.net/strtolower">strtolower()</a> function.</function></p>
+
+<h4>Custom functions</h4>
+
+<p>This is just an introduction, so I won’t explain all the details, but the following example should explain the essentials:</p>
+
+<pre><code class="php">&lt;?php
+// Make a list of invalid sentences to print
+$invalidSetences = [
+	&#39;Don\&#39;t print me!&#39;,
+	&#39;PHP sucks!&#39;
+];
+
+// Function to print a paragraph on the page
+function printParagraph($data)
+{
+	// This makes the variable outside of the function accessible from within the function
+	global $invalidSentences;
+	
+	// Make sure the input data is a string, is longer than 0 and isn&#39;t in the banned list
+	if (!is_string($data) || (strlen($data) == 0) || in_array($data, $invalidSentences))
+	{
+	  return false;
+	}
+	else
+	{
+		// The sentence is OK, print it!
+	  echo(&#39;&lt;p&gt;&#39;.$data.&#39;&lt;/p&gt;&#39;.&quot;\n&quot;);
+	}
+}
+
+printParagraph(&#39;Hello World!&#39;);
+printParagraph(&#39;Yay, my first custom made function. Totally homebrewed!&#39;);
+
+if (!printParagraph(&#39;PHP sucks!&#39;))
+{
+	printParagraph(&#39;PHP Rules!&#39;);
+}
+?&gt;</code></pre>
+
+<p>Output:</p>
+
+<pre><code class="html">&lt;p&gt;Hello World!&lt;/p&gt;
+
+&lt;p&gt;Yay, my first custom made function. Totally homebrewed!&lt;/p&gt;
+
+&lt;p&gt;PHP Rules!&lt;/p&gt;</code></pre>
+
+<h3>Object Oriented Programming (OOP) &ndash; Classes in PHP</h3>
+
+<p>OOP in PHP is a quite big subject and will be covered in a later post. I suggest you use the API for now: <a target="_blank" href="http://php.net/manual/en/language.oop5.php">http://php.net/manual/en/language.oop5.php</a></p>
+
+</div>
+
+</body>
+</html>

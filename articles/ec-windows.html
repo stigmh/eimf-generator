@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>ec for Windows</title>
+  
+  <link rel="stylesheet" href="../js/highlight/styles/default.css" />
+  <script type="text/javascript" src="../js/highlight/highlight.pack.js"></script>
+  <script type="text/javascript">hljs.initHighlightingOnLoad();</script>
+</head>
+<body>
+  <h1>ec for Windows 7/8</h1>
+  
+  <p class="date">2013-03-11</p>
+  
+  <p>I was tired of complex routines for compiling Emerald programs on Windows, so I developed this small Open Source tool called &laquo;<em>ec</em> for Windows&raquo;. &laquo;<em>ec</em> for Windows&raquo; is an open source multi-threaded command line <em>(cmd)</em> tool used to easily compile <a href="http://www.emeraldprogramminglanguage.org/" target="_blank">Emerald</a> programs. <strong>NB:</strong> Requires that you have installed the <a href="http://www.uio.no/studier/emner/matnat/ifi/INF5510/v13/installere.html" target="_blank"> Emerald Windows compiler</a>.</p>
+
+<p> - <a href="http://www.everythingismyfault.com/archive/ec_for_windows_1.0.0.zip">Click here to download the binaries</a><br />
+ - <a href="https://bitbucket.org/shalvorsen/ec-for-windows">Click here for the source code</a> (git repo)</p>
+
+<h2>1. Installation</h2>
+
+<p>Copy ec.exe into the your emerald &laquo;bin&raquo; directory <em>(i.e.: C:\emerald\bin)</em>.</p>
+
+<p>Make sure your emerald bin directory is listed in the <em>Path</em> Windows <em>environment variable</em>.</p>
+
+<ol>
+	<li>Go to computer properties <em>Right click -&gt; properties</em></li>
+	<li>Click <em>Advanced system settings</em></li>
+	<li>Click [Enviro<span style="text-decoration: underline;">n</span>ment Variables...]</li>
+	<li>Find/mark <em>Path</em> under <em><span style="text-decoration: underline;">S</span>ystem variables</em></li>
+	<li>Click [Ed<span style="text-decoration: underline;">i</span>t...]</li>
+	<li>Add <em>;C:\emerald\bin</em>.</li>
+	<li>Click [OK], and log out of Windows or reboot.</li>
+</ol>
+
+<p>You are now able to call <em>ec</em> from any location within CMD.</p>
+
+<h2>2. Usage</h2>
+
+<h3>Compile a single file</h3>
+
+<pre><code>C:\Users\username\> ec kilroy.m
+Compiling kilroy.m</code></pre>
+
+<h3>Compile a multiple files <em>(1 to n)</em></h3>
+
+<pre><code>C:\Users\username\> ec kilroy.m timesynch.m hi-ho.m
+Compiling timesynch.m
+Compiling hi-ho.m</code></pre>
+
+<h3>Alternate compilation of a single file</h3>
+
+<pre><code>C:\Users\username\> ec
+Command: kilroy.m
+Compiling kilroy.m
+Command: q</code></pre>
+
+<h2>3. MIT License</h2>
+
+<p>&laquo;<em>ec</em> for Windows 7/8&raquo; is open-source C++11 and the source code can be redeemed at the following <em>git</em> repository; <a href="https://bitbucket.org/shalvorsen/ec-for-windows" target="_blank">https://bitbucket.org/shalvorsen/ec-for-windows</a>. The <strong>Emerald compiler &amp; source code</strong> is not and should never be distributed with this software as it is licensed under the <em>GNU General Public Licence v2</em>.</p>
+
+<p>Copyright &copy; 2013 Stig M. Halvorsen (<a href="http://everythingismyfault.com" target="_blank">everythingismyfault.com</a>)</p>
+
+<p>Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the &quot;Software&quot;), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sub-license, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:</p>
+
+<p>The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.</p>
+
+<p>THE SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</p>
+
+</body>
+</html>

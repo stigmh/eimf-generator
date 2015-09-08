@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>Howto properly install NVIDIA drivers on Ubuntu 12.10</title>
+</head>
+<body>
+  <h1>Howto properly install NVIDIA drivers on Ubuntu 12.10</h1>
+  
+  <p class="date">2012-12-11</p>
+  
+  <p class="image"></p>
+  
+  <p>I decided to write this note to my selves and every one else with NVIDIA graphics driver issues on Ubuntu, as I spent more than two days figuring this out. The open source original driver that came with the Ubuntu installation was slow and buggy, so I decided to install NVIDIA's proprietary drivers instead. A simple Google search gave me a lot of hits with the same solution, but it didn't work. The result was a lowres CPU drawn screen and the Ubuntu user interface (Unity) failed to load.</p>
+
+<p><strong>Updated 22nd of January 2013</strong></p>
+
+<p>The reason for failure was that it requires the Linux source &amp; headers to be installed, which doesn't come with Ubuntu 12.10. So here's how to fix it:</p>
+
+<h2>Installation</h2>
+
+<ol>
+<li>Switch to terminal (non-gui): <code style="background-color: #E6E6E5">Ctrl+Alt+F1</code></li>
+<li>Log in with your user name</li>
+<li>Add the repos for the NVIDIA drivers if you haven't already, and make sure your repos are up to date afterwards.
+<ul>
+<li><code style="background-color: #E6E6E5">sudo apt-add-repository ppa:ubuntu-x-swat/x-updates</code></li>
+<li><code style="background-color: #E6E6E5">sudo apt-get update</code></li>
+<li><code style="background-color: #E6E6E5">sudo apt-get upgrade</code></li>
+</ul>
+</li>
+<li>Install the linux-source and linux-headers, if not already installed. The NVIDIA driver needs these to install properly and they're no longer included by default in Ubuntu.
+<ul>
+<li><code style="background-color: #E6E6E5">sudo apt-get install linux-source</code></li>
+<li><code style="background-color: #E6E6E5">sudo apt-get install linux-headers-generic</code></li>
+</ul>
+</li>
+<li>Uninstall the NVIDIA propretary drivers if you have an unsuccessful install.
+<ul>
+<li><code style="background-color: #E6E6E5">sudo apt-get remove nvidia-current-updates</code> <b>OR</b> <code style="background-color: #E6E6E5">sudo apt-get remove nvidia-current</code> <b>OR</b> <code style="background-color: #E6E6E5">sudo apt-get remove nvidia-experimental-304</code></li>
+<li>Note that the one you choose depends on which you already have installed, if any.</li>
+</ul>
+</li>
+<li>(Re)Install the NVIDIA driver: <code style="background-color: #E6E6E5">sudo apt-get install nvidia-current-updates</code></li>
+<li>Reboot: <code style="background-color: #E6E6E5">sudo reboot now</code></li>
+</ol>
+
+<p>This worked well for me on a system with &laquo;Geforce GTX 460&raquo;, and should work if you have similar problems. It was the following post on &laquo;Ask Ubuntu&raquo; that led me to the uninstall solution: <a href="http://askubuntu.com/questions/202677/nvidia-driver-doesnt-work-in-12-10" target="_blank">http://askubuntu.com/questions/202677/nvidia-driver-doesnt-work-in-12-10</a></p>
+
+<p>I recommend that you check out the bottom section of <a href="http://techhamlet.com/2012/11/install-nvidia-drivers-in-ubuntu-12-10/" target="_blank">this blog post</a> if you still have problems.</p>
+
+</body>
+</html>

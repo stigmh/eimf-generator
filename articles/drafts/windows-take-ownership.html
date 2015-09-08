@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>Take ownership of system file in Windows</title>
+  
+  <link rel="stylesheet" href="../js/highlight/styles/default.css" />
+  <script type="text/javascript" src="../js/highlight/highlight.pack.js"></script>
+  <script type="text/javascript">hljs.initHighlightingOnLoad();</script>
+</head>
+<body>
+  <h1>Take ownership of system file in Windows</h1>
+  
+  <p class="date">2015-01-22</p>
+  
+  <ol>
+    <li>Safe Mode</li>
+    <li>Elevated CMD</li>
+    <li>takeown /f Path_And_File_Name</li>
+    <li>icacls Path_And_File_Name /GRANT ADMINISTRATORS:F</li>
+    <li>copy Source_File Destination</li>
+  </ol>
+
+  <p>Source: <a href="https://support.microsoft.com/KB/929833#manually%20repair" target="_blank">https://support.microsoft.com/KB/929833#manually%20repair</a></p>
+</body>
+</html>
