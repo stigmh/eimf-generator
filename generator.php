@@ -543,19 +543,6 @@ foreach ($articles as $article) {
     $articleData = str_replace('<!-- ## CONTENT ## -->', (($numSubArticles > 1) ? $a->body.$partNavigation : $a->body), $articleData);
     //$articleData = str_replace('<!-- ## MENU ## -->', $subMenu, $articleData);
     $articleData = str_replace('<!-- ## MENU ## -->', '', $articleData);
-    $articleData = str_replace('<!-- ## COMMENTS ## -->',
-    '<div id="disqus_thread"></div>
-<script type="text/javascript">
-    var disqus_shortname = "everythingismyfault";
-    var disqus_identifier = "'.$article->filename.'";
-    
-    (function() {
-        var dsq = document.createElement("script"); dsq.type = "text/javascript"; dsq.async = true;
-        dsq.src = "//" + disqus_shortname + ".disqus.com/embed.js";
-        (document.getElementsByTagName("head")[0] || document.getElementsByTagName("body")[0]).appendChild(dsq);
-    })();
-</script>'
-, $articleData);
     
     file_put_contents($resultsDir.'/articles/'.$a->filename.'.html', $articleData);
   }
