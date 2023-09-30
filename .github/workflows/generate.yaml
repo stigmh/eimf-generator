@@ -14,7 +14,9 @@ jobs:
         uses: shivammathur/setup-php@v2
         with:
           php-version: '8.2'
-      - run: php generator.php
+      - run: |
+          mkdir bin/
+          php generator.php
       - name: Archive generated static site
         uses: actions/upload-artifact@v3
         with:
