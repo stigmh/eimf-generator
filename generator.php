@@ -14,6 +14,7 @@ $templatesDir = $rootDir .'/templates';
 $imagesDir = $articlesDir.'/imgs';
 $page_template = $templatesDir.'/template.html';
 $article_template = $templatesDir.'/article_template.html';
+$current_year = date('Y');
 
 /* Verification */
 
@@ -471,6 +472,7 @@ foreach ($pageFiles as $page) {
   
   $pageData = str_replace('<!-- ## TITLE ## -->', $p->title.' | EiMF', $templateContents);
   $pageData = str_replace('<!-- ## CONTENT ## -->', $p->body, $pageData);
+  $pageData = str_replace('<!-- ## YEAR ## -->', $current_year, $pageData);
   $p->body = $pageData;
   
   unset($pageData);
@@ -503,6 +505,7 @@ foreach ($articles as $article) {
 
 $contents .= '</div>';
 $articleData = str_replace('<!-- ## CONTENT ## -->', $contents, $articleData);
+$articleData = str_replace('<!-- ## YEAR ## -->', $current_year, $articleData);
 //$articleData = str_replace('<!-- ## MENU ## -->', $mainMenu, $articleData);
 $articleData = str_replace('<!-- ## MENU ## -->', '', $articleData);
 file_put_contents($resultsDir.'/index.html', $articleData);
@@ -541,6 +544,7 @@ foreach ($articles as $article) {
     
     $articleData = str_replace('<!-- ## TITLE ## -->', $a->title.' | EiMF', $templateContents);
     $articleData = str_replace('<!-- ## CONTENT ## -->', (($numSubArticles > 1) ? $a->body.$partNavigation : $a->body), $articleData);
+    $articleData = str_replace('<!-- ## YEAR ## -->', $current_year, $articleData);
     //$articleData = str_replace('<!-- ## MENU ## -->', $subMenu, $articleData);
     $articleData = str_replace('<!-- ## MENU ## -->', '', $articleData);
     
